@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* Product Component Styles */
+.product {
+  border: 1px solid gray;
+  background: lightblue;
+  color: black;
+  padding: 10px;
+  width: 20%;
+  margin: 20px;
+  display: inline-grid;
+}
+
+.products{
+  background: lightgreen;
+  padding:20px;
+}
