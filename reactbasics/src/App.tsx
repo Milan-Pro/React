@@ -6,10 +6,11 @@ import { JSXDemo } from  "./JSXDemo";
 
 import { Products } from  "./Products";
 import RenderDemo from './RenderDemo';
+import { Register } from'./Register';
 
 function App() {
 
-  return (
+  /* return (
       //React.fragment or use <>,</>
       <React.Fragment> 
 
@@ -26,7 +27,15 @@ function App() {
       </div>
       
       </React.Fragment>
-    )
+      
+    ) */
+    //React Form Demo
+    return (
+      <div className="App">
+        <Register />
+      </div>
+    );
+  
 }
 
 export default App;

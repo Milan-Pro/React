@@ -7,34 +7,23 @@ interface IProductProps {
     item: IProduct
 }
 
-interface IProductState {
-    data: IProduct;
-}
+/*Function Component
+1)does not require react React.Component
+2)does not require state
+3)light weight compare to class
+4)faster then class component
+5)Life cycle method can be possible with react hooks
+6)
+*/
+export const Product = (props:IProductProps) =>{
+        //Do somethiing before render
 
-export class Product extends React.Component<IProductProps, IProductState> {
-    constructor(props: IProductProps) {
-        super(props);
-
-        this.state = {
-            data: props.item
-        };   
-    }
-
-    public render() : JSX.Element {
+        //Render
         return <div className="product">
-            { this.state.data.id } <br/>
-            { this.state.data.name }  <br/>
-            { this.state.data.cat } <br/>
-            { this.state.data.price } &nbsp;
+            { props.item.id } <br/>
+            { props.item.name }  <br/>
+            { props.item.cat } <br/>
+            { props.item.price } &nbsp;
 
-            <input type="button" onClick={ () => {
-                let item = this.state.data;
-                item.price += 10;
-
-                this.setState({
-                    data: item
-                });
-            }} value=" + " />
         </div>;
-    }
 }
