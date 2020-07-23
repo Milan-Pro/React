@@ -10,6 +10,7 @@ import './App.css';
 //import { Invoices } from "./Invoices";
 //import { InvoiceProvider } from "./InvoiceProvider";
 import { StateDemo } from './StateDemo';
+import { Student } from './StudentComponent'
 
 function App() {
 
@@ -63,9 +64,14 @@ function App() {
   ); */
 
   return (
+    <React.Fragment>
     <div className="App">
       <StateDemo info="This is info (message)" />
     </div>
+    <div>
+      <Student rollNo={101}/>
+    </div>
+    </React.Fragment>
   );
   
 }

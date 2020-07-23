@@ -14,13 +14,16 @@ export class StateDemo extends React.Component<IStateDemoProps, IStateDemoState>
     private msg : string = "Render Fired!";
 
     constructor(props: IStateDemoProps) {
+        //super is require to call parent class constructor
+        //The super keyword refers to the parent class.
+        // It is used to call the constructor of the parent class and to access the parent's properties and methods.
         super(props);
 
         // Initialize the State
         this.state = {
             count: 0,
             timestamp: new Date().getTime(),
-            message: this.props.info as string
+            message: this.props.info as string //operating props inside state info is props here
         };
     }
     //set state in compononet did mount
