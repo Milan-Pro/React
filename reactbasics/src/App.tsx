@@ -9,8 +9,11 @@ import './App.css';
 //import { Register } from'./Register';
 //import { Invoices } from "./Invoices";
 //import { InvoiceProvider } from "./InvoiceProvider";
-import { StateDemo } from './StateDemo';
-import { Student } from './StudentComponent'
+//import { StateDemo } from './StateDemo';
+//import { Student } from './StudentComponent'
+//import { countReset } from 'console';
+import { Counter } from './Counter';
+import { Contacts } from "./Contacts";
 
 function App() {
 
@@ -63,7 +66,8 @@ function App() {
     </div>
   ); */
 
-  return (
+  //state demo
+  /* return (
     <React.Fragment>
     <div className="App">
       <StateDemo info="This is info (message)" />
@@ -72,6 +76,27 @@ function App() {
       <Student rollNo={101}/>
     </div>
     </React.Fragment>
+  ); */
+  
+  //React hook demo
+  let b = {
+    id :1,
+    name: "Sample-book"
+  }
+  return (
+    <div className="App">
+      {/*passing the object book inline
+      <Counter initial={ 10 } book={{ 
+        id: 1,
+        name: "Sample book"
+      }} /> */}
+      {/*passing the object book through variable b*/}
+      <Counter initial={ 10 } book={b} />
+
+      <div className="App">
+      <Contacts />
+      </div>
+    </div>
   );
   
 }
