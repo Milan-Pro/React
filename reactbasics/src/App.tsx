@@ -78,7 +78,8 @@ function App() {
     </React.Fragment>
   ); */
   
-  //React hook demo
+  //React hook demo 
+  //use state React hook demo
   let b = {
     id :1,
     name: "Sample-book"

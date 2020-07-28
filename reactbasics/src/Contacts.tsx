@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 interface IContact {
     name: string;
@@ -21,7 +21,21 @@ const data : IContact[] = [
 ];
 
 export function Contacts() : JSX.Element {
+    let flag : number = 0;
     let [contacts,setContacts] = useState(data);
+
+    useEffect(()=>{
+        // LIKE componentDidMount - Fires only once after render
+        console.log("Component DidMount--> Fired After render");
+        flag = 1;
+    },[flag]);
+
+    useEffect(()=>{
+        // LIKE componentDidUpdate - Fires after ever render
+        console.log("Component DidUpdate --> Fired After render");
+    });
+
+    console.log("Render Firing...");
 
     return <div>
         {

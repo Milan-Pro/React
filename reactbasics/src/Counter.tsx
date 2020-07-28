@@ -4,7 +4,7 @@ export interface ICounterProps {
     initial: number;
     book: IBook; // interface to set hook state
 }
-
+//use state React hook demo
 //set state with hook
 interface IBook {
     id: number;
