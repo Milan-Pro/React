@@ -12,8 +12,9 @@ import './App.css';
 //import { StateDemo } from './StateDemo';
 //import { Student } from './StudentComponent'
 //import { countReset } from 'console';
-import { Counter } from './Counter';
-import { Contacts } from "./Contacts";
+//import { Counter } from './Counter';
+//import { Contacts } from "./Contacts";
+import { ContextDemo } from './ContextDemo';
 
 function App() {
 
@@ -80,7 +81,7 @@ function App() {
   
   //React hook demo 
   //use state React hook demo
-  let b = {
+  /*let b = {
     id :1,
     name: "Sample-book"
   }
@@ -90,13 +91,20 @@ function App() {
       <Counter initial={ 10 } book={{ 
         id: 1,
         name: "Sample book"
-      }} /> */}
-      {/*passing the object book through variable b*/}
-      <Counter initial={ 10 } book={b} />
+      }} /> */
+    /*passing the object book through variable b*/
+      /*<Counter initial={ 10 } book={b} />
 
       <div className="App">
       <Contacts />
       </div>
+    </div>
+  );*/
+
+  //useContext hooks demo
+  return(
+    <div className="App">
+      <ContextDemo/>
     </div>
   );
   
